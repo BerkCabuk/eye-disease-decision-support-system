@@ -26,8 +26,8 @@ Bu projede kullanılan veri seti, fundus kamera görüntülerinden elde edilen e
 Veri seti boyutunun büyük olması nedeniyle **GitHub deposuna eklenmemiştir**. Veri seti aşağıdaki klasör yapısına sahiptir:
 
 veri seti/
-├── eğitim/
-├── doğrulama/
+├── train/
+├── val/
 └── test/
 
 
@@ -118,4 +118,5 @@ Bu proje kapsamında geliştirilen karar destek sistemi, retina görüntülerind
 Ad Soyad: Berk Çabuk
 Ders: Sinir Ağları
 Proje Türü: Büt Projesi
+
 
