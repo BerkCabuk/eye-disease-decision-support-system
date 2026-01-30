@@ -7,7 +7,6 @@ app = Flask(__name__)
 UPLOAD_FOLDER = "static/uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
-# klasör yoksa oluştur
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/", methods=["GET", "POST"])
