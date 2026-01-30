@@ -1,64 +1,31 @@
-# ===============================
 # Python
-# ===============================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.log
-
-# ===============================
-# Virtual Environments
-# ===============================
-env/
+.env
 venv/
-.venv/
-eye_cnn/
+.env/
 
-# ===============================
-# Dataset (VERY IMPORTANT)
-# ===============================
-dataset/
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset (ÇOK ÖNEMLİ)
 raw_dataset/
+dataset/
 data/
 *.jpg
 *.png
 *.jpeg
 
-# ===============================
-# Trained Models
-# ===============================
+# Trained models
 model/
 *.h5
 *.keras
 
-# ===============================
-# Results (Graphs are OK)
-# ===============================
-# (results klasörü kalsın, grafikler görünsün)
+# Uploads
+static/uploads/
 
-# ===============================
-# VS Code
-# ===============================
-.vscode/
-
-# ===============================
-# OS Files
-# ===============================
+# OS
 .DS_Store
 Thumbs.db
-
-# ===============================
-# Jupyter
-# ===============================
-.ipynb_checkpoints/
-
-# ===============================
-# TensorFlow / Cache
-# ===============================
-logs/
-checkpoints/
-# ===============================
-# Flask uploads
-# ===============================
-static/uploads/
