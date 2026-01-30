@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Göz Hastalığı Karar Destek Sistemi</title>
+</head>
+<body>
+    <h1>Göz Hastalığı Tespiti (CNN)</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <br><br>
+        <button type="submit">Tahmin Et</button>
+    </form>
+
+    {% if result %}
+        <hr>
+        <h2>Sonuç</h2>
+        <p><strong>Hastalık:</strong> {{ result }}</p>
+        <p><strong>Güven:</strong> %{{ "%.2f"|format(confidence) }}</p>
+        <img src="{{ image_path }}" width="300">
+    {% endif %}
+</body>
+</html>
