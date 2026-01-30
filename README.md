@@ -103,18 +103,19 @@ pip install -r requirements.txt
 ###7.2 Modelin Eğitilmesi
 python train_model.py
 
-7.3 Web Uygulamasının Başlatılması
+###7.3 Web Uygulamasının Başlatılması
 python app.py
 
 ---
 
-8.Sonuç ve Gelecek Çalışmalar
+## 8.Sonuç ve Gelecek Çalışmalar
 Bu proje kapsamında geliştirilen karar destek sistemi, retina görüntülerinden otomatik göz hastalığı tespiti yapabilmektedir. Gelecek çalışmalarda daha büyük veri setleri, farklı derin öğrenme mimarileri ve model iyileştirme teknikleri kullanılarak sistemin başarımı artırılabilir.
 
 ---
 
-9. Yazar Bilgisi
+## 9. Yazar Bilgisi
 
 Ad Soyad: Berk Çabuk
 Ders: Sinir Ağları
 Proje Türü: Büt Projesi
+
