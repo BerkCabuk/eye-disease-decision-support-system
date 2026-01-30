@@ -2,12 +2,11 @@ import os
 import shutil
 import random
 
-# Orijinal veri setinin olduğu klasör
-SOURCE_DIR = "raw_dataset"   # BURAYA DİKKAT
+SOURCE_DIR = "raw_dataset"   
 TRAIN_DIR = "dataset/train"
 TEST_DIR = "dataset/test"
 
-SPLIT_RATIO = 0.8  # %80 train, %20 test
+SPLIT_RATIO = 0.8  
 
 os.makedirs(TRAIN_DIR, exist_ok=True)
 os.makedirs(TEST_DIR, exist_ok=True)

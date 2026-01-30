@@ -1,6 +1,3 @@
-# =========================
-# GRAFİK BACKEND FIX (ÇOK ÖNEMLİ)
-# =========================
 import matplotlib
 matplotlib.use("Agg")
 
@@ -14,9 +11,6 @@ from tensorflow.keras.layers import Dense, Dropout, GlobalAveragePooling2D
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 
-# =========================
-# PATHLER
-# =========================
 BASE_DIR = os.getcwd()
 DATASET_DIR = os.path.join(BASE_DIR, "dataset")
 TRAIN_DIR = os.path.join(DATASET_DIR, "train")
@@ -29,17 +23,11 @@ MODEL_DIR = os.path.join(BASE_DIR, "model")
 os.makedirs(RESULTS_DIR, exist_ok=True)
 os.makedirs(MODEL_DIR, exist_ok=True)
 
-# =========================
-# PARAMETRELER
-# =========================
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 16
 EPOCHS = 15
 LEARNING_RATE = 0.0001
 
-# =========================
-# DATA GENERATOR
-# =========================
 train_datagen = ImageDataGenerator(
     rescale=1./255,
     rotation_range=15,
@@ -74,9 +62,6 @@ test_gen = val_test_datagen.flow_from_directory(
 NUM_CLASSES = train_gen.num_classes
 print("Sınıf sayısı:", NUM_CLASSES)
 
-# =========================
-# MODEL (MobileNetV2)
-# =========================
 base_model = MobileNetV2(
     weights="imagenet",
     include_top=False,
@@ -102,32 +87,19 @@ model.compile(
 
 model.summary()
 
-# =========================
-# TRAIN
-# =========================
 history = model.fit(
     train_gen,
     validation_data=val_gen,
     epochs=EPOCHS
 )
 
-# =========================
-# MODEL SAVE
-# =========================
 model_path = os.path.join(MODEL_DIR, "eye_model.h5")
 model.save(model_path)
 print("✔ Model kaydedildi")
 
-# =========================
-# TEST
-# =========================
 test_loss, test_acc = model.evaluate(test_gen)
 print(f"Test Accuracy: %{test_acc * 100:.2f}")
 
-# =========================
-# GRAFİKLER
-# =========================
-# Accuracy
 plt.figure()
 plt.plot(history.history["accuracy"], label="Train Accuracy")
 plt.plot(history.history["val_accuracy"], label="Val Accuracy")
@@ -138,7 +110,6 @@ plt.title("Accuracy Graph")
 plt.savefig(os.path.join(RESULTS_DIR, "accuracy.png"))
 plt.close()
 
-# Loss
 plt.figure()
 plt.plot(history.history["loss"], label="Train Loss")
 plt.plot(history.history["val_loss"], label="Val Loss")

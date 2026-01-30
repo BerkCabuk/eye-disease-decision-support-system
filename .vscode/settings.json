@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "C:/Users/MONSTER/anaconda3/envs/eye_cnn/python.exe",
+  "python.analysis.extraPaths": [
+    "C:/Users/MONSTER/anaconda3/envs/eye_cnn/Lib/site-packages"
+  ]
+}

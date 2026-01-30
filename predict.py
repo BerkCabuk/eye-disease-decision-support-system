@@ -3,9 +3,6 @@ import numpy as np
 from tensorflow.keras.preprocessing import image
 import os
 
-# =========================
-# AYARLAR
-# =========================
 MODEL_PATH = "model/eye_model.h5"
 IMG_SIZE = 224
 
@@ -22,15 +19,9 @@ CLASS_NAMES = [
     "Retinitis Pigmentosa"
 ]
 
-# =========================
-# MODELİ YÜKLE
-# =========================
 model = tf.keras.models.load_model(MODEL_PATH)
 print("✔ Model yüklendi")
 
-# =========================
-# TAHMİN FONKSİYONU
-# =========================
 def predict_image(img_path):
     if not os.path.exists(img_path):
         raise FileNotFoundError(f"❌ Dosya bulunamadı: {img_path}")
@@ -48,11 +39,8 @@ def predict_image(img_path):
 
     return predicted_class, confidence
 
-# =========================
-# TEST (ELLE ÇALIŞTIRMA)
-# =========================
 if __name__ == "__main__":
-    test_image_path = "test.jpg"  # buraya test resmi koy
+    test_image_path = "test.jpg"  
 
     disease, confidence = predict_image(test_image_path)
 
